@@ -86,7 +86,7 @@ static id<IController> instance;
 	if (commandClassRef == nil) {
 		return;
 	}
-	[(id<ICommand>)[[[commandClassRef alloc] init] autorelease] execute:notification];
+	[(id<ICommand>)[[commandClassRef alloc] init] execute:notification];
 }
 
 /**
@@ -137,9 +137,9 @@ static id<IController> instance;
 -(void)dealloc {
 	self.commandMap = nil;
 	self.view = nil;
-	[(id)instance release];
+//	[(id)instance release];
 	instance = nil;
-	[super dealloc];
+//	[super dealloc];
 }
 
 @end

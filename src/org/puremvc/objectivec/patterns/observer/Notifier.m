@@ -48,7 +48,7 @@
 
 -(void)dealloc {
 	self.facade = nil;
-	[super dealloc];
+//	[super dealloc];
 }
 
 @end

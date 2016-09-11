@@ -296,9 +296,9 @@ static id<IFacade> instance;
 	self.model = nil;
 	self.controller = nil;
 	self.view = nil;
-	[(id)instance release];
+//	[(id)instance release];
 	instance = nil;
-	[super dealloc];
+//	[super dealloc];
 }
 
 @end

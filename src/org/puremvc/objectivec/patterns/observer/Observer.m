@@ -17,7 +17,7 @@
  * Static Convienence Constructor.
  */
 +(id)withNotifyMethod:(SEL)notifyMethod notifyContext:(id)notifyContext {
-	return [[[self alloc] initWithNotifyMethod:notifyMethod notifyContext:notifyContext] autorelease];
+	return [[self alloc] initWithNotifyMethod:notifyMethod notifyContext:notifyContext];
 }
 
 /**
@@ -60,7 +60,6 @@
 -(void)dealloc {
 	self.notifyMethod = nil;
 	self.notifyContext = nil;
-	[super dealloc];
 }
 
 

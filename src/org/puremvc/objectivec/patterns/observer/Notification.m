@@ -21,19 +21,19 @@
  * @param type the type of the <code>Notification</code>
  */
 +(id)withName:(NSString *)name body:(id)body type:(NSString *)type {
-	return [[[self alloc] initWithName:name body:body type:type] autorelease];
+	return [[self alloc] initWithName:name body:body type:type];
 }
 
 +(id)withName:(NSString *)name {
-	return [[[self alloc] initWithName:name body:nil type:nil] autorelease];
+	return [[self alloc] initWithName:name body:nil type:nil];
 }
 
 +(id)withName:(NSString *)name body:(id)body {
-	return [[[self alloc] initWithName:name body:body type:nil] autorelease];
+	return [[self alloc] initWithName:name body:body type:nil];
 }
 
 +(id)withName:(NSString *)name type:(NSString *)type {
-	return [[[self alloc] initWithName:name body:nil type:type] autorelease];
+	return [[self alloc] initWithName:name body:nil type:type];
 }
 
 /**
@@ -65,7 +65,6 @@
 	self.name = nil;
 	self.body = nil;
 	self.type = nil;
-	[super dealloc];
 }
 
 @end

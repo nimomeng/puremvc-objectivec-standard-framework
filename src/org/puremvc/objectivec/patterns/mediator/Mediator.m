@@ -13,19 +13,19 @@
 @synthesize mediatorName, viewComponent;
 
 +(id)mediator {
-	return [[[self alloc] initWithMediatorName:nil viewComponent:nil] autorelease];
+	return [[self alloc] initWithMediatorName:nil viewComponent:nil];
 }
 
 +(id)withMediatorName:(NSString *)mediatorName {
-	return [[[self alloc] initWithMediatorName:mediatorName viewComponent:nil] autorelease];
+	return [[self alloc] initWithMediatorName:mediatorName viewComponent:nil];
 }
 
 +(id)withMediatorName:(NSString *)mediatorName viewComponent:(id)viewComponent {
-	return [[[self alloc] initWithMediatorName:mediatorName viewComponent:viewComponent] autorelease];
+	return [[self alloc] initWithMediatorName:mediatorName viewComponent:viewComponent];
 }
 
 +(id)withViewComponent:(id)viewComponent {
-	return [[[self alloc] initWithMediatorName:nil viewComponent:viewComponent] autorelease];
+	return [[self alloc] initWithMediatorName:nil viewComponent:viewComponent];
 }
 
 -(id)initWithMediatorName:(NSString *)_mediatorName viewComponent:(id)_viewComponent {
@@ -95,7 +95,6 @@
 -(void)dealloc {
 	self.mediatorName = nil;
 	self.viewComponent = nil;
-	[super dealloc];
 }
 
 @end

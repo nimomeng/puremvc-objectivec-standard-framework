@@ -199,9 +199,7 @@ static id<IView> instance;
 -(void)dealloc {
 	self.mediatorMap = nil;
 	self.observerMap = nil;
-	[(id)instance release];
 	instance = nil;
-	[super dealloc];
 }
 
 @end

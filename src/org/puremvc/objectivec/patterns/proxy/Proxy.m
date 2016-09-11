@@ -13,19 +13,19 @@
 @synthesize data, proxyName;
 
 +(id)proxy {
-	return [[[self alloc] initWithProxyName:nil data:nil] autorelease];
+	return [[self alloc] initWithProxyName:nil data:nil];
 }
 
 +(id)withProxyName:(NSString *)proxyName {
-	return [[[self alloc] initWithProxyName:proxyName data:nil] autorelease];
+	return [[self alloc] initWithProxyName:proxyName data:nil];
 }
 
 +(id)withProxyName:(NSString *)proxyName data:(id)data {
-	return [[[self alloc] initWithProxyName:proxyName data:data] autorelease];
+	return [[self alloc] initWithProxyName:proxyName data:data];
 }
 
 +(id)withData:(id)data {
-	return [[[self alloc] initWithProxyName:nil data:data] autorelease];
+	return [[self alloc] initWithProxyName:nil data:data];
 }
 
 -(id)initWithProxyName:(NSString *)_proxyName data:(id)_data {
@@ -67,7 +67,6 @@
 -(void)dealloc {
 	self.data = nil;
 	self.proxyName = nil;
-	[super dealloc];
 }
 
 @end
